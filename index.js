@@ -88,6 +88,10 @@ const addWebpackResolve = resolve => config => {
   Object.assign(config.resolve, resolve);
   return config;
 }
+const targetElectronRenderer = () => config => {
+  config.target = "electron-renderer";
+  return config;
+};
 
 const adjustWorkbox = adjust => config => {
   config.plugins.forEach(p => {
@@ -319,6 +323,7 @@ module.exports = {
   disableEsLint,
   addWebpackAlias,
   addWebpackResolve,
+  targetElectronRenderer,
   adjustWorkbox,
   useEslintRc,
   enableEslintTypescript,

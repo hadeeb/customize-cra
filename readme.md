@@ -149,6 +149,9 @@ Adds the provided alias info into webpack's alias section. Pass an object litera
 ### addWebpackResolve(resolve)
 
 Adds the provided resolve info into webpack's resolve section. Pass an object literal with as many entries as you'd like, and the whole object will be merged in.
+### targetElectronRenderer()
+
+Set the webpack target to `electron-renderer`. It let you use electron and related dependencies in your app.
 
 ### addBundleVisualizer(options, behindFlag = false)
 
